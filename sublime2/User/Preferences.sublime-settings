@@ -1,3 +1,55 @@
 {
-  "theme": "Soda Dark.sublime-theme"
+  "color_scheme": "Packages/Color Scheme - Default/Sunburst.tmTheme",
+  "folder_exclude_patterns":
+  [
+    ".svn",
+    ".git",
+    ".hg",
+    "CVS",
+    ".sass-cache",
+    "log",
+    "vendor/bundle",
+    ".bundle",
+    "tmp",
+    "log"
+  ],
+  "file_exclude_patterns": [
+    "*.DS_Store",
+    "*.scssc",
+    "*.lock",
+    "*.dump",
+    "*.jpg",
+    "*.jpeg",
+    "*.png",
+    "*.gif",
+    "*.ttf",
+    "*.tga",
+    "*.dds",
+    "*.ico",
+    "*.eot",
+    "*.pdf",
+    "*.swf",
+    "*.jar",
+    "*.sassc",
+    "*.zip"
+  ],
+  "color_scheme": "Packages/Color Scheme - Default/Sunburst.tmTheme",
+  "detect_indentation": false,
+  "font_size": 12.0,
+  "ignored_packages":
+  [
+    "Vintage",
+    "SublimeCodeIntel",
+    "Git"
+  ],
+  "rulers":
+  [
+    79
+  ],
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true,
+  "trim_trailing_whitespace_on_save": true,
+  "word_wrap": true,
+  "wrap_width": 80
+
 }
