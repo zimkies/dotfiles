@@ -1,2 +1,17 @@
 [
+    { "keys": ["shift+super+s"], "command": "strip_trailing_whitespace" },
+    { "keys": ["super+alt+f"], "command": "show_panel", "args": {"panel": "find"} },
+    { "keys": ["super+f"], "command": "show_panel", "args": {"panel": "replace"} },
+    { "keys": ["super+1"], "command": "focus_group", "args": { "group": 0 } },
+    { "keys": ["super+2"], "command": "focus_group", "args": { "group": 1 } },
+    { "keys": ["super+3"], "command": "focus_group", "args": { "group": 2 } },
+    { "keys": ["super+4"], "command": "focus_group", "args": { "group": 3 } },
+    { "keys": ["shift+super+1"], "command": "move_to_group", "args": { "group": 0 } },
+    { "keys": ["shift+super+2"], "command": "move_to_group", "args": { "group": 1 } },
+    // We cannot override the default photo snapping behavior.
+    { "keys": ["shift+super+3"], "command": "move_to_group", "args": { "group": 2 } },
+    { "keys": ["shift+super+4"], "command": "move_to_group", "args": { "group": 3 } },
+    { "keys": ["super+shift+m"], "command": "expand_selection", "args": {"to": "brackets"} },
+    // save as
+    { "keys": ["ctrl+super+alt+s"], "command": "prompt_save_as" }
 ]
