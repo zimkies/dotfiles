@@ -1,12 +1,15 @@
 # Sample gitconfig
 #
-# You probably want to change the [user] section here since you are not me.
+# You probably want to change the [user] and [github] sections here since you are not me.
 
 [hub]
         protocol = https
 [user]
         name = Tom Brown
         email = tom@joingrouper.com
+[github]
+  user = nottombrown
+
 [credential]
         helper = osxkeychain
 [alias]
@@ -20,16 +23,30 @@
         br = branch
         df = diff
         lg = log -p
+
 [color]
-        diff = auto
-        status = auto
-        branch = auto
-        ui = true
+  ui = true
+[color "branch"]
+  current = yellow black
+  local = yellow
+  remote = magenta
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red reverse
+  new = green reverse
+  whitespace = white reverse
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan reverse
+  branch = magenta
+
 [core]
 	excludesfile = /Users/tombrown/.gitignore
         editor = vim
 [apply]
-        whitespsuace = nowarn
+        whitespsace = nowarn
 [mergetool]
         keepBackup = false
 [difftool]
