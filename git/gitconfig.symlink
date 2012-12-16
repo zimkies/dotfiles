@@ -5,8 +5,8 @@
 [hub]
         protocol = https
 [user]
-        name = Zach Holman
-        email = zach@zachholman.com
+        name = Tom Brown
+        email = tom@joingrouper.com
 [credential]
         helper = osxkeychain
 [alias]
@@ -15,16 +15,21 @@
         wtf     = !$ZSH/bin/git-wtf
         rank-contributers = !$ZSH/bin/git-rank-contributers
         count   = !git shortlog -sn
+        st = status
+        ci = commit
+        br = branch
+        df = diff
+        lg = log -p
 [color]
         diff = auto
         status = auto
         branch = auto
         ui = true
 [core]
-        excludesfile = ~/.gitignore
+	excludesfile = /Users/tombrown/.gitignore
         editor = vim
 [apply]
-        whitespace = nowarn
+        whitespsuace = nowarn
 [mergetool]
         keepBackup = false
 [difftool]
