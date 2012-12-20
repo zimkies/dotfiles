@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "color_scheme": "Packages/Color Scheme - Default/Sunburst.tmTheme",
   "folder_exclude_patterns":
   [
@@ -53,3 +54,8 @@
   "wrap_width": 80
 
 }
+=======
+	"font_size": 12.0,
+	"theme": "Soda Dark.sublime-theme"
+}
+>>>>>>> de65362d6a42242c9ca55270cec3a85f4dd65f9a

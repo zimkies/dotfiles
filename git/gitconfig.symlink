@@ -2,16 +2,21 @@
 #
 # You probably want to change the [user] and [github] sections here since you are not me.
 
+
 [hub]
         protocol = https
 [user]
         name = Tom Brown
         email = tom@joingrouper.com
 [github]
-  user = nottombrown
+        user = nottombrown
 
 [credential]
         helper = osxkeychain
+        name = Tom Brown
+        email = tom@joingrouper.com
+        helper = osxkeychain
+
 [alias]
         co = checkout
         promote = !$ZSH/bin/git-promote
@@ -43,8 +48,8 @@
   branch = magenta
 
 [core]
-	excludesfile = /Users/tombrown/.gitignore
-        editor = vim
+        excludesfile = ~/.gitignore
+
 [apply]
         whitespsace = nowarn
 [mergetool]
