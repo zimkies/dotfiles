@@ -14,7 +14,3 @@ export PATH=$PATH:$HOME/lib
 
 # Set up Postgresql
 export PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
-
-# rbenv shims
-export PATH="$HOME/.rbenv/bin:$PATH"
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
