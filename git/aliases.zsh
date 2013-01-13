@@ -7,7 +7,10 @@ then
 fi
 
 # Tom's Aliases
-alias g="git commit -am "
+
+# http://www.commandlinefu.com/commands/view/1246/git-remove-files-which-have-been-deleted
+alias g="git add -u && git commit -m "
+
 alias gpp='git pull && git push'
 
 # The rest of my fun git aliases
