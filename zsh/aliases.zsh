@@ -1,5 +1,6 @@
 alias reload!='. ~/.zshrc'
 
+alias dotfiles='cd ~/.dotfiles'
 
 alias anno='bundle exec annotate -p before'
 
