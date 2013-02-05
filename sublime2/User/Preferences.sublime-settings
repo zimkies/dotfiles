@@ -30,8 +30,7 @@
 		".sass-cache",
 		"log",
 		"vendor/bundle",
-    ".bundle",
-		"node_modules",
+		".bundle",
 		"tmp",
 		"log"
 	],
