@@ -41,7 +41,8 @@
 		"Vintage",
 		"Haskell",
 		"Alignment",
-		"SublimeCodeIntel"
+		"SublimeCodeIntel",
+		"SublimeLinter"
 	],
 	"rulers":
 	[
