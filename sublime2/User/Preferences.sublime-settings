@@ -37,12 +37,13 @@
 	"font_size": 12.0,
 	"ignored_packages":
 	[
-		"Clojure",
+		"BracketHighlighter",
+		"SublimeCodeIntel",
 		"Vintage",
 		"Haskell",
-		"Alignment",
-		"SublimeCodeIntel",
-		"SublimeLinter"
+		"SublimeLinter",
+		"Clojure",
+		"Alignment"
 	],
 	"rulers":
 	[

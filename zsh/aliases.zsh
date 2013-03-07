@@ -11,5 +11,7 @@ alias dbup='curl -o latest.dump `heroku pgbackups:url --app grouper-app` && pg_r
 alias update-staging='heroku pgbackups:restore --app grouper-staging HEROKU_POSTGRESQL_CYAN  `heroku pgbackups:url --app grouper-app` --confirm grouper-staging'
 
 
+function fname() { find . -iname "*$@*"; }
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
