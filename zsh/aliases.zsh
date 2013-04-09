@@ -2,6 +2,8 @@ alias reload!='. ~/.zshrc'
 
 alias dotfiles='cd ~/.dotfiles'
 
+alias e='subl .'
+
 alias anno='bundle exec annotate -p before'
 
 alias dbg='rake db:test:prepare && bundle exec guard'

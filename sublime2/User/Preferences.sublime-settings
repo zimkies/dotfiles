@@ -37,9 +37,11 @@
 	"font_size": 12.0,
 	"ignored_packages":
 	[
+		"SublimeSBT",
 		"BracketHighlighter",
 		"SublimeCodeIntel",
 		"Vintage",
+		"Ensime",
 		"Haskell",
 		"SublimeLinter",
 		"Clojure",

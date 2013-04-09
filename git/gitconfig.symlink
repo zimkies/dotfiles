@@ -48,7 +48,7 @@
   branch = magenta
 
 [core]
-        excludesfile = ~/.gitignore
+	excludesfile = /Users/tombrown/.gitignore
 
 [apply]
         whitespsace = nowarn
