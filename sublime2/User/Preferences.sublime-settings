@@ -32,7 +32,8 @@
 		"vendor/bundle",
 		".bundle",
 		"tmp",
-		"log"
+		"log",
+		"coverage"
 	],
 	"font_size": 12.0,
 	"ignored_packages":
@@ -41,6 +42,7 @@
 		"BracketHighlighter",
 		"SublimeCodeIntel",
 		"Vintage",
+		"TrailingSpaces",
 		"Ensime",
 		"Haskell",
 		"SublimeLinter",
