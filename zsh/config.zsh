@@ -46,3 +46,7 @@ bindkey '^[[5C' end-of-line
 bindkey '^[[3~' delete-char
 bindkey '^[^N' newtab
 bindkey '^?' backward-delete-char
+
+# Use _ and . as word separators
+autoload -U select-word-style
+select-word-style bash

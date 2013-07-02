@@ -36,10 +36,7 @@
 		"log",
 		"coverage"
 	],
-  "line_padding_bottom": 1,
-  "line_padding_top": 1,
-  "font_face": "Anonymous Pro",
-	"font_size": 13.70,
+	"font_size": 12.0,
 	"ignored_packages":
 	[
 		"SublimeSBT",
