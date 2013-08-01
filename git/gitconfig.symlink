@@ -6,15 +6,15 @@
 [hub]
         protocol = https
 [user]
-        name = Tom Brown
-        email = tom@joingrouper.com
+        name = Benjamin Kies	
+        email = ben@joingrouper.com
 [github]
-        user = nottombrown
+        user = zimkies 
 
 [credential]
         helper = osxkeychain
-        name = Tom Brown
-        email = tom@joingrouper.com
+        name = Benjamin Kies 
+        email = benm@joingrouper.com
         helper = osxkeychain
 
 [alias]
@@ -48,7 +48,7 @@
   branch = magenta
 
 [core]
-	excludesfile = /Users/tombrown/.gitignore
+	excludesfile = /Users/zimkies/.gitignore
 
 [apply]
         whitespsace = nowarn
@@ -58,3 +58,5 @@
         prompt = false
 [help]
         autocorrect = 1
+[push]
+	default = simple
