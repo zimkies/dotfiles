@@ -1,4 +1,4 @@
-# holman does dotfiles
+# trex does dotfiles
 
 ## dotfiles
 
@@ -21,7 +21,7 @@ subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 Run this:
 
 ```sh
-git clone https://github.com/holman/dotfiles.git ~/.dotfiles
+git clone https://github.com/nottombrown/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 ```
