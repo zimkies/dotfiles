@@ -1,4 +1,4 @@
-# trex does dotfiles
+# Forked from @holman
 
 ## dotfiles
 
