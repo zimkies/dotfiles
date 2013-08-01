@@ -59,5 +59,6 @@
 	"trim_trailing_whitespace_on_save": true,
 	"word_wrap": true,
 	"wrap_width": 80,
-  "ignored_packages": []
+	"ignored_packages": [],
+	"ensure_newline_at_eof_on_save": true
 }
