@@ -11,7 +11,7 @@ fi
 # http://www.commandlinefu.com/commands/view/1246/git-remove-files-which-have-been-deleted
 alias g="git add -u && git commit -m "
 
-alias gpp='git pull --rebase && git push'
+alias gpp='git pull && git push'
 alias gra='git rebase --abort'
 alias grc='git rebase --continue'
 
