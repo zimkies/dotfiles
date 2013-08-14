@@ -1,6 +1,6 @@
-# Forked from @holman
+# dotfiles
 
-## dotfiles
+** Forked from @holman **
 
 Your dotfiles are how you personalize your system. These are mine.
 
@@ -34,6 +34,10 @@ which sets up a few paths that'll be different on your particular machine.
 defaults, and so on. Tweak this script, and occasionally run `dot` from
 time to time to keep your environment fresh and up-to-date. You can find
 this script in `bin/`.
+
+To turn on zsh, open your terminal preferences and change the "Shell opens with" command to `/bin/zsh`
+
+Also on startup, you should open with settings "Homebrew" to make things look hacker-y
 
 ## topical
 
