@@ -1,6 +1,6 @@
 # dotfiles
 
-** Forked from @holman **
+_Forked from @holman_
 
 Your dotfiles are how you personalize your system. These are mine.
 
