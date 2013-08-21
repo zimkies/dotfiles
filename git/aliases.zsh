@@ -9,6 +9,8 @@ fi
 # Tom's Aliases
 
 # http://www.commandlinefu.com/commands/view/1246/git-remove-files-which-have-been-deleted
+#
+
 alias g="git add -u && git commit -m "
 
 alias gpp='git pull && git push'
