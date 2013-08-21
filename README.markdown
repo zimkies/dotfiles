@@ -22,6 +22,7 @@ Run this:
 git clone https://github.com/nottombrown/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
+sublime2/setup
 ```
 
 This will symlink the appropriate files in `.dotfiles` to your home directory.
