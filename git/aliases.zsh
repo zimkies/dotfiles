@@ -9,9 +9,13 @@ fi
 # Tom's Aliases
 
 # http://www.commandlinefu.com/commands/view/1246/git-remove-files-which-have-been-deleted
+#
+
 alias g="git add -u && git commit -m "
 
 alias gpp='git pull && git push'
+alias gra='git rebase --abort'
+alias grc='git rebase --continue'
 
 # The rest of my fun git aliases
 alias gl='git pull --prune'

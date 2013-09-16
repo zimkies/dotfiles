@@ -58,7 +58,7 @@
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_whitespace_on_save": true,
 	"word_wrap": true,
-	"wrap_width": 80,
-	"ignored_packages": [],
-	"ensure_newline_at_eof_on_save": true
+  "ignored_packages": [],
+	"ensure_newline_at_eof_on_save": true,
+	"wrap_width": 80
 }

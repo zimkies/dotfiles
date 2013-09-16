@@ -1,7 +1,6 @@
-# Forked from @holman
+# dotfiles
 
-
-## dotfiles
+_Forked from @holman_
 
 Your dotfiles are how you personalize your system. These are mine.
 
@@ -17,12 +16,15 @@ subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 
 ## install
 
+Fork this repo (You're guaranteed to want to customize things, so really, make a fork)
+
 Run this:
 
 ```sh
 git clone https://github.com/nottombrown/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
+sublime2/setup
 ```
 
 This will symlink the appropriate files in `.dotfiles` to your home directory.
@@ -35,6 +37,10 @@ which sets up a few paths that'll be different on your particular machine.
 defaults, and so on. Tweak this script, and occasionally run `dot` from
 time to time to keep your environment fresh and up-to-date. You can find
 this script in `bin/`.
+
+To turn on zsh, open your terminal preferences and change the "Shell opens with" command to `/bin/zsh`
+
+Also on startup, you should open with settings "Homebrew" to make things look hacker-y
 
 ## topical
 
