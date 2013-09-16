@@ -16,6 +16,8 @@ subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 
 ## install
 
+Fork this repo (You're guaranteed to want to customize things, so really, make a fork)
+
 Run this:
 
 ```sh
