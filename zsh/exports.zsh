@@ -1,7 +1,7 @@
 
 # Git
 export EDITOR='subl -w'
-export GIT_EDITOR='emacs'
+export GIT_EDITOR='vim'
 export GIT_MERGE_AUTOEDIT=no
 
 ### Added by the Heroku Toolbelt

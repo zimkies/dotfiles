@@ -13,4 +13,5 @@ alias update-staging='heroku pgbackups:restore --app grouper-staging HEROKU_POST
 alias test-staging='heroku run rake sauce:test --app grouper-staging'
 
 # Push to staging and run tests
-alias push-staging='git push staging master &&  test-staging'           
+alias push-staging='git push staging master &&  test-staging'
+alias ga="cd ~/Workspace/GrouperApp"
