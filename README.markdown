@@ -16,12 +16,15 @@ subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 
 ## install
 
+Fork this repo (You're guaranteed to want to customize things, so really, make a fork)
+
 Run this:
 
 ```sh
 git clone https://github.com/nottombrown/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
+sublime2/setup
 ```
 
 This will symlink the appropriate files in `.dotfiles` to your home directory.
