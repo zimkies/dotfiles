@@ -44,11 +44,11 @@
 		"SublimeCodeIntel",
 		"Vintage",
 		"TrailingSpaces",
+		"Ensime",
 		"Haskell",
-		"SublimeLinter",
-		"Clojure",
 		"Alignment",
-		"Ensime"
+		"Clojure",
+		"SublimeLinter"
 	],
 	"rulers":
 	[
