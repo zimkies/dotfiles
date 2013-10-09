@@ -2,7 +2,8 @@
 	"caret_style": "wide",
 	"color_scheme": "Packages/Color Scheme - Default/Sunburst.tmTheme",
 	"detect_indentation": false,
-	"file_exclude_patterns": 
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
 	[
 		"*.DS_Store",
 		"*.scssc",
@@ -43,11 +44,11 @@
 		"BracketHighlighter",
 		"SublimeCodeIntel",
 		"TrailingSpaces",
+		"Ensime",
 		"Haskell",
 		"SublimeLinter",
 		"Clojure",
-		"Alignment",
-		"Ensime"
+		"Alignment"
 	],
 	"rulers":
 	[
@@ -57,6 +58,5 @@
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_whitespace_on_save": true,
 	"word_wrap": true,
-	"ensure_newline_at_eof_on_save": true,
 	"wrap_width": 80
 }
