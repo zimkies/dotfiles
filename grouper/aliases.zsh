@@ -14,3 +14,6 @@ alias test-staging='heroku run rake sauce:test --app grouper-staging'
 
 # Push to staging and run tests
 alias push-staging='git push staging master'           
+
+# We dump the structure so that circleci can get sql set up correctly
+alias dump-structure='rake db:structure:dump'
