@@ -13,7 +13,11 @@ alias update-staging='heroku pgbackups:restore --app grouper-staging HEROKU_POST
 alias test-staging='heroku run rake sauce:test --app grouper-staging'
 
 # Push to staging and run tests
-alias push-staging='git push staging master'           
+alias push-staging='git push staging master'
 
 # We dump the structure so that circleci can get sql set up correctly
 alias dump-structure='rake db:structure:dump'
+
+
+# Promote from staging to both admin and production
+alias promote-all='heroku pipeline:promote --app grouper-staging && heroku pipeline:promote --app grouper-admin'
