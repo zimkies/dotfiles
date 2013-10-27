@@ -1,4 +1,3 @@
-
 # Git
 export EDITOR='subl -w'
 export GIT_EDITOR='emacs'
