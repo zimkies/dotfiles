@@ -3,3 +3,6 @@
 *~
 *.swp
 *.rbc
+.bundle
+.ruby-version
+.sass-cache
