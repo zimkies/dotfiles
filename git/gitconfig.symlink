@@ -28,6 +28,7 @@
         br = branch
         df = diff
         lg = log -p
+        a = add -A .
 
 [color]
   ui = true
@@ -58,3 +59,5 @@
         prompt = false
 [help]
         autocorrect = 1
+[push]
+	default = simple
