@@ -6,7 +6,7 @@ alias dbg='rake db:test:prepare && bundle exec guard'
 
 alias dbup='wget -O latest.dump `heroku pgbackups:url --app grouper-app` && pg_restore --verbose --clean --no-acl --no-owner -U grouper -d grouper_app_development -h localhost latest.dump'
 
-alias update-staging='heroku pgbackups:restore --app grouper-staging HEROKU_POSTGRESQL_CYAN  `heroku pgbackups:url --app grouper-app` --confirm grouper-staging'
+alias update-staging='heroku pgbackups:restore --app grouper-app HEROKU_POSTGRESQL_AQUA `heroku pgbackups:url --app grouper-app` --confirm grouper-app'
 
 
 # Run selenium tests on staging
