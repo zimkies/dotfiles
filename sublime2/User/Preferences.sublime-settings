@@ -36,6 +36,7 @@
 		"tmp",
 		"log",
 		"coverage"
+    // "venv"
 	],
 	"font_size": 12.0,
 	"ignored_packages":
@@ -52,11 +53,12 @@
 	],
 	"rulers":
 	[
-		79
+		80
 	],
 	"tab_size": 2,
+	"trailing_spaces_enabled": false,
 	"translate_tabs_to_spaces": true,
-	"trim_trailing_whitespace_on_save": true,
+	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true,
 	"wrap_width": 80
 }
