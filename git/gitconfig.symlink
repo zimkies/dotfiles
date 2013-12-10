@@ -28,6 +28,7 @@
         br = branch
         df = diff
         lg = log -p
+        a = add -A .
 
 [color]
   ui = true

@@ -21,6 +21,7 @@
 		"*.swf",
 		"*.jar",
 		"*.sassc",
+		"*.sublime-workspace",
 		"*.zip"
 	],
 	"folder_exclude_patterns":
