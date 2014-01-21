@@ -19,3 +19,6 @@ alias dump-structure='rake db:structure:dump'
 
 # Promote from staging to both admin and production
 alias promote-all='heroku pipeline:promote --app grouper-staging && heroku pipeline:promote --app grouper-admin'
+
+# Pull in master and deploy to staging then promote
+alias deploy='git pull && git push staging master && promote-all'
