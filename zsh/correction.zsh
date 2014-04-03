@@ -1,0 +1,1 @@
+alias spring='nocorrect spring'

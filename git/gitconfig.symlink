@@ -6,15 +6,15 @@
 [hub]
         protocol = https
 [user]
-        name = Benjamin Kies	
+        name = Benjamin Kies
         email = ben@joingrouper.com
 [github]
-        user = zimkies 
+        user = zimkies
 
 [credential]
         helper = osxkeychain
-        name = Benjamin Kies 
-        email = benm@joingrouper.com
+        name = Benjamin Kies
+        email = ben@joingrouper.com
         helper = osxkeychain
 
 [alias]
@@ -50,6 +50,7 @@
 
 [core]
 	excludesfile = /Users/zimkies/.gitignore
+	editor = vim
 
 [apply]
         whitespsace = nowarn
@@ -61,3 +62,6 @@
         autocorrect = 1
 [push]
 	default = simple
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f

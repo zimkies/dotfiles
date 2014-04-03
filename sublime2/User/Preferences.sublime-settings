@@ -36,8 +36,9 @@
 		".bundle",
 		"tmp",
 		"log",
-		"coverage"
-    // "venv"
+		"coverage",
+		"js_app",
+		"assets/source_maps"
 	],
 	"font_size": 12.0,
 	"ignored_packages":

@@ -1,7 +1,7 @@
 # Aliases
 alias barterenv="source $HOME/Virtualenv/barterenv/bin/activate"
 alias barter="cd $HOME/Workspace/barter/"
-alias be="barterenv && barter"
+#alias be="barterenv && barter"
 alias bmedia="python manage.py coffee && python manage.py lessc"
 alias syncdb="python manage.py syncdb --migrate"
 alias upload="git push ssh://zimkies@review.barter.im:29418/barter HEAD:refs/for/master"
