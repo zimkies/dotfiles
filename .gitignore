@@ -8,3 +8,5 @@ sublime2/User/*.system-ca-bundle
 sublime2/User/*.cache
 sublime2/User/oscrypto-ca-bundle.crt
 git/gitconfig.symlink
+
+*.cache

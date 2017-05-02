@@ -1,3 +1,5 @@
+# Run ./clear_cache everytime you change dotfiles and source this file to load changes
+
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
 
@@ -12,30 +14,56 @@ then
 fi
 
 # all of our zsh files
-typeset -U config_files
-config_files=($ZSH/**/*.zsh)
+
+if [ ! -f "$path_file_cache" ]; then
+    typeset -U config_files
+    config_files=($ZSH/**/*.zsh)
+fi
 
 # load the path files
-for file in ${(M)config_files:#*/path.zsh}
-do
-  source $file
-done
+path_file_cache="$ZSH"/path_files.cache
+if [ -f "$path_file_cache" ]; then
+  source "$path_file_cache"
+else
+  for file in ${(M)config_files:#*/path.zsh}
+  do
+    echo "sourcing $file"
+    source $file
+  done
+
+  cat ${(M)config_files:#*/path.zsh} > "$path_file_cache"
+fi
 
 # load everything but the path and completion files
-for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
-do
-  source $file
-done
+
+non_path_non_completion_file_cache="$ZSH"/non_path_non_completion_file_cache.cache
+if [ -f "$non_path_non_completion_file_cache" ]; then
+  source "$non_path_non_completion_file_cache"
+else
+  for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
+  do
+    echo "$file"
+    source $file
+  done
+  cat ${${config_files:#*/path.zsh}:#*/completion.zsh} > "$non_path_non_completion_file_cache"
+fi
 
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
 
 # load every completion after autocomplete loads
-
-for file in ${(M)config_files:#*/completion.zsh}
-do
-  source $file
-done
+# load everything but the path and completion files
+completion_file_cache="$ZSH"/completion_file_cache.cache
+if [ -f "$completion_file_cache" ]; then
+  source "$completion_file_cache"
+else
+  for file in ${(M)config_files:#*/completion.zsh}
+  do
+    echo "$file"
+    source $file
+  done
+  cat ${(M)config_files:#*/completion.zsh} > "$completion_file_cache"
+fi
 
 unset config_files
