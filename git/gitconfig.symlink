@@ -6,8 +6,8 @@
 [hub]
         protocol = https
 [user]
-        name = Benjamin Kies
-        email = ben@joingrouper.com
+	name = Ben Kies
+	email = bkies@flatiron.com
 [github]
         user = zimkies
 
@@ -29,6 +29,7 @@
         df = diff
         lg = log -p
         a = add -A .
+        ff = merge --ff-only
 
 [color]
   ui = true
@@ -49,7 +50,7 @@
   branch = magenta
 
 [core]
-	excludesfile = /Users/zimkies/.gitignore
+	excludesfile = /Users/bkies-mbp/.gitignore_global
 	editor = vim
 
 [apply]
@@ -65,3 +66,9 @@
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
+[branch]
+	autosetuprebase = always
+[pull]
+	rebase = true
+[gui]
+	recentrepo = /Users/bkies-mbp/code/flatiron

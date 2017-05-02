@@ -9,6 +9,7 @@
 		"*.scssc",
 		"*.dump",
 		"*.jpg",
+		"*.pyc",
 		"*.jpeg",
 		"*.png",
 		"*.gif",
@@ -40,27 +41,27 @@
 		"js_app",
 		"assets/source_maps"
 	],
-	"font_size": 12.0,
+	"font_size": 9.0,
 	"ignored_packages":
 	[
-		"SublimeSBT",
+		"Alignment",
 		"BracketHighlighter",
-		"SublimeCodeIntel",
-		"TrailingSpaces",
+		"Clojure",
 		"Ensime",
 		"Haskell",
+		"SublimeCodeIntel",
 		"SublimeLinter",
-		"Clojure",
-		"Alignment"
+		"SublimeSBT",
+		"TrailingSpaces"
 	],
 	"rulers":
 	[
-		80
+		120
 	],
 	"tab_size": 2,
 	"trailing_spaces_enabled": false,
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": true,
-	"wrap_width": 80
+	"wrap_width": 120
 }

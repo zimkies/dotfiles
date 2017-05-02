@@ -2,6 +2,9 @@ sublime2/User/Package\ Control.sublime-settings
 sublime2/User/Package\ Control.last-run
 sublime2/User/Package\ Control.cache/
 sublime2/User/Package\ Control.system-ca-bundle
+sublime2/User/Package\ Control.merged-ca-bundle
+sublime2/User/Package\ Control.user-ca-bundle
 sublime2/User/*.system-ca-bundle
 sublime2/User/*.cache
+sublime2/User/oscrypto-ca-bundle.crt
 git/gitconfig.symlink
