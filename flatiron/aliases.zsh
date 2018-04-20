@@ -1,8 +1,12 @@
 # activate global virtualenv
+eval "$(pyenv init -)"
+
 alias fhactivate='source ~/code/env/bin/activate'
 alias fhpgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 
-export BLOCKS_MSSQL_CONNECTS=~/mssql_connections.yaml
+export BLOCKS_MSSQL_CONNECTS=~/.mssql_connections.yaml
+export SLACK_LUNCHBOT_ACCESS_TOKEN=xoxb-213483738647-enL3kHDb6sqgDaJWKjxp3TBq
+export JELLIES_DEV_ID="bkies"
 
 migrate_all_the_things() {
    python -m patient_manager.scripts.manage migrate upgrade;
@@ -17,10 +21,33 @@ release_log () {
  }
 
 # Set patient manager debug to true for aloe tests
-alias fhdebug="sed -i.bak '79,95 s/debug = false/debug = true/g' ~/code/flatiron/test.cfg; rm ~/code/flatiron/test.cfg.bak"
+alias fhdebug="sed -i.bak '110,125 s/debug = false/debug = true/g; s/log_to_console = true/log_to_console = false/g;' ~/code/flatiron/test.cfg; rm ~/code/flatiron/test.cfg.bak"
 
 # Unset patient manager debug to true for aloe tests
-alias fhundebug="sed -i.bak '79,95 s/debug = true/debug = false/g' ~/code/flatiron/test.cfg; rm ~/code/flatiron/test.cfg.bak"
+alias fhundebug="sed -i.bak '110,125 s/debug = true/debug = false/g; s/log_to_console = false/log_to_console = true/g;' ~/code/flatiron/test.cfg; rm ~/code/flatiron/test.cfg.bak"
+
+
+alias fh_local_debug="sed -i.bak 's/disable_user_sessions = false/disable_user_sessions = true/g; s/^core_db_url = .*/core_db_url = postgresql\+psycopg2\:\/\/p-pm-postgres-replica\.the\.flatiron\.com\:5432\/core/g' ~/code/flatiron/dev-settings.cfg; rm ~/code/flatiron/dev-settings.cfg.bak;"
+alias fh_local_undebug="sed -i.bak 's/disable_user_sessions = true/disable_user_sessions = false/g; s/^core_db_url = .*/core_db_url = postgresql\+psycopg2\:\/\/core\:fifi92\@127\.0\.0\.1\:5432\/core/g' ~/code/flatiron/dev-settings.cfg; rm ~/code/flatiron/dev-settings.cfg.bak;"
 
 alias fhmigrate='migrate_all_the_things'
 
+_adhocpush() {
+    branch_name=`git rev-parse --abbrev-ref HEAD`
+    echo "Pushing $branch_name to abstech/$branch_name";
+    echo 'git push -u origin '"$branch_name"':abstech/'"$branch_name;"
+    git push -u origin "$branch_name":abstech/"$branch_name";
+}
+
+_adhocdelete() {
+    branch_name=`git rev-parse --abbrev-ref HEAD`
+    echo "Deleting adhoc remote branch :abstech/$branch_name";
+
+    echo "git push origin abstech/$branch_name";
+    git push origin abstech/"$branch_name";
+    echo "git branch --unset-upstream";
+    git branch --unset-upstream;
+}
+
+alias adhocpush="_adhocpush"
+alias adhocdelete="_adhocdelete"

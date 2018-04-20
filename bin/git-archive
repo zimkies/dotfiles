@@ -1,0 +1,11 @@
+#!/bin/sh
+#
+# archives a git branch by prepending 'archive/' to the branch name
+#
+branch=$1
+echo $1
+if [ -z "$branch" ]; then
+echo "usage: git_branch_archive branch_name"
+exit 1
+fi
+git branch -m $1 "archive/$1"
