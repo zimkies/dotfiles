@@ -27,10 +27,57 @@ alias fhdebug="sed -i.bak '110,125 s/debug = false/debug = true/g; s/log_to_cons
 alias fhundebug="sed -i.bak '110,125 s/debug = true/debug = false/g; s/log_to_console = false/log_to_console = true/g;' ~/code/flatiron/test.cfg; rm ~/code/flatiron/test.cfg.bak"
 
 
-alias fh_local_debug="sed -i.bak 's/disable_user_sessions = false/disable_user_sessions = true/g; s/^core_db_url = .*/core_db_url = postgresql\+psycopg2\:\/\/p-pm-postgres-replica\.the\.flatiron\.com\:5432\/core/g' ~/code/flatiron/dev-settings.cfg; rm ~/code/flatiron/dev-settings.cfg.bak;"
-alias fh_local_undebug="sed -i.bak 's/disable_user_sessions = true/disable_user_sessions = false/g; s/^core_db_url = .*/core_db_url = postgresql\+psycopg2\:\/\/core\:fifi92\@127\.0\.0\.1\:5432\/core/g' ~/code/flatiron/dev-settings.cfg; rm ~/code/flatiron/dev-settings.cfg.bak;"
 
 alias fhmigrate='migrate_all_the_things'
+
+
+# Set up Patient Manager's environment to point to production databases, and disable user sessions to prevent trying to write to the database.
+# Useful when trying to debug production issues locally.
+_fh_local_debug() {
+  replace_disable_user_sessions='s/disable_user_sessions = false/disable_user_sessions = true/g';
+  replace_core_db_url='s/^core_db_url = .*/core_db_url = postgresql\+psycopg2\:\/\/p-pm-postgres-replica\.flatiron\.io\:5432\/core/g';
+  replace_documents_db_url='s/^documents_db_url = .*/documents_db_url = postgresql\+psycopg2\:\/\/p-documents-postgres-replica\.flatiron\.io\:5432\/core/g';
+
+  sed -i.bak "$replace_disable_user_sessions; $replace_core_db_url; $replace_documents_db_url" ~/code/flatiron/dev-settings.cfg;
+  rm ~/code/flatiron/dev-settings.cfg.bak;
+}
+
+#sed '/\[logging\]/a\'$'\n''\console_format'$'\n' ~/code/flatiron/dev-settings.cfg | grep -B 3 -A 3 logging
+# Set up Patient Manager's environment to point to production databases, and disable user sessions to prevent trying to write to the database.
+# Useful when trying to debug production issues locally.
+#  replace_console_format='/\[logging\]/\[logging\]\\nconsole_format = succicnt/';
+_fh_development_settings() {
+
+  replace_console_format='/\[logging\]/a\'$'\n''\console_format = succinct'$'\n'
+
+  sed -i.bak "$replace_console_format;" ~/code/flatiron/dev-settings.cfg;
+  rm ~/code/flatiron/dev-settings.cfg.bak;
+}
+
+_fh_clear_development_settings() {
+
+  delete_console_format='/console_format = succinct/d'
+
+  sed -i.bak "$delete_console_format;" ~/code/flatiron/dev-settings.cfg;
+  rm ~/code/flatiron/dev-settings.cfg.bak;
+}
+
+alias fh_dev_settings="_fh_development_settings"
+alias fh_clear_dev_settings="_fh_clear_development_settings"
+
+# Set up Patient Manager's environment back to normal after running fh_local_debug
+_fh_local_undebug() {
+  replace_disable_user_sessions='s/disable_user_sessions = true/disable_user_sessions = false/g';
+  replace_core_db_url='s/^core_db_url = .*/core_db_url = postgresql\+psycopg2\:\/\/core\:fifi92\@127\.0\.0\.1\:5432\/core/g';
+  replace_documents_db_url='s/^documents_db_url = .*/documents_db_url = postgresql\+psycopg2\:\/\/documents\:fifi92\@127\.0\.0\.1\:5432\/documents/g';
+
+  sed -i.bak "$replace_disable_user_sessions; $replace_core_db_url; $replace_documents_db_url" ~/code/flatiron/dev-settings.cfg;
+
+  rm ~/code/flatiron/dev-settings.cfg.bak;
+}
+
+alias fh_local_debug="_fh_local_debug"
+alias fh_local_undebug="_fh_local_undebug"
 
 _adhocpush() {
     branch_name=`git rev-parse --abbrev-ref HEAD`
