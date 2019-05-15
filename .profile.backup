@@ -4,24 +4,23 @@
 # Include npm bins in path
 export PATH=$PATH:/usr/local/share/npm/bin:/usr/local/sbin
 PATH=/usr/local/bin:$PATH
- 
+
 # Add folder color
 export CLICOLOR=1
 
 # Sublime stuff
 defaults write com.sublimetext.2 ApplePressAndHoldEnabled -bool false
- 
+
 # Git branch Highlighting
 export PS1="\[\033[38m\]\u@officepro\[\033[01;34m\] \w \[\033[31m\]\`ruby -e \"print (%x{git branch 2> /dev/null}.split(%r{\n}).grep(/^\*/).first || '').gsub(/^\* (.+)$/, '(\1) ')\"\`\[\033[37m\]$\[\033[00m\] "
- 
+
 #Git autocomplete
 if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
 . `brew --prefix`/etc/bash_completion.d/git-completion.bash
 fi
- 
+
 # Allow autocomplete for rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
- 
+
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
- 

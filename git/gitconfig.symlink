@@ -11,11 +11,6 @@
 [github]
         user = zimkies
 
-[credential]
-        helper = osxkeychain
-        name = Benjamin Kies
-        email = ben@joingrouper.com
-        helper = osxkeychain
 
 [alias]
         co = checkout

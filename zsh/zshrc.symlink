@@ -67,3 +67,5 @@ else
 fi
 
 unset config_files
+
+source ~/.bash_profile
