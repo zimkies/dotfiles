@@ -37,3 +37,4 @@ alias gpr="git pull --rebase origin master"
 alias gitarchive="git branch -m "
 
 alias pull-request='git push origin -u && git pull-request'
+alias git-files="git diff-tree --no-commit-id --name-only -r"

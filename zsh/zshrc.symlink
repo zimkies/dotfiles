@@ -1,4 +1,6 @@
 # Run ./clear_cache everytime you change dotfiles and source this file to load changes
+OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
 
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
@@ -68,4 +70,21 @@ fi
 
 unset config_files
 
-source ~/.bash_profile
+
+# copied from .bash_profile.
+
+# This causes a lot of problems: Commented out
+# PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/jamf/bin:/usr/local/jamf/bin
+
+export PATH="${PATH}:$HOME/code/phacility/arcanist/bin"
+export PATH="${PATH}:$HOME/code/flatiron/bin"
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+
+source /Users/bkies-mbp/.flatironrc
+
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
