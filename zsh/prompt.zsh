@@ -47,27 +47,6 @@ need_push () {
   fi
 }
 
-ruby_version() {
-  if (( $+commands[rbenv] ))
-  then
-    echo "$(rbenv version | awk '{print $1}')"
-  fi
-
-  if (( $+commands[rvm-prompt] ))
-  then
-    echo "$(rvm-prompt | awk '{print $1}')"
-  fi
-}
-
-rb_prompt() {
-  if ! [[ -z "$(ruby_version)" ]]
-  then
-    echo "%{$fg_bold[yellow]%}$(ruby_version)%{$reset_color%} "
-  else
-    echo ""
-  fi
-}
-
 directory_name() {
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
@@ -76,13 +55,21 @@ directory_name() {
 #  ➤
 #  ॐ
 #  ओ
-export PROMPT=$'\n$(rb_prompt)in $(directory_name) $(git_dirty)$(need_push)\n%{$reset_color%} ॐ  '
+# export PROMPT=$'\n$(directory_name) $(git_dirty)$(need_push)\n%{$reset_color%} ॐ  '
 
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }
 
+
+
 precmd() {
-  title "zsh" "%m" "%55<...<%~"
+  # title "zsh" "%m" "%55<...<%~"
+
+  
+  export PROMPT=$'\n$(directory_name) \n%{$reset_color%} ॐ  '
+  # Uncomment this line to enable much nice git tracking. 
+  # This is incredibly slow on the monorepo though, so it's disabled by default. 
+  # export PROMPT=$'\n$(directory_name) $(git_dirty)$(need_push)\n%{$reset_color%} ॐ  '
   set_prompt
 }
