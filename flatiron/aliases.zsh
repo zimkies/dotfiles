@@ -21,10 +21,6 @@ alias fhpgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/se
 # RDS documents database
 alias psql_documents_rds='psql -h s-documents.cemaxvjhe85e.us-east-1.rds.amazonaws.com -d documents -U bkies '
 
-export BLOCKS_MSSQL_CONNECTS=~/.mssql_connections.yaml
-export SLACK_LUNCHBOT_ACCESS_TOKEN=xoxb-213483738647-enL3kHDb6sqgDaJWKjxp3TBq
-export JELLIES_DEV_ID="bkies"
-
 alias withprod='OVERRIDE_RUNNING_WITH_PHI=1 FH_SETTINGS_FILE=~/flatiron_settings/prod.cfg'
 alias withbetterform='FH_SETTINGS_FILE=~/code/flatiron/research/bkies/settings/a_better_form.cfg'
 alias withmultitababstraction='FH_SETTINGS_FILE=~/code/flatiron/research/bkies/settings/multitab_abstraction.cfg'
