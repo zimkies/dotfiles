@@ -63,13 +63,24 @@ set_prompt () {
 
 
 
+virtualenv_prompt () {
+  if [ -z "$VIRTUAL_ENV" ]
+  then
+    echo ""
+  else
+    echo "($VIRTUAL_ENV)"
+  fi
+
+}
+
 precmd() {
   # title "zsh" "%m" "%55<...<%~"
 
-  
-  export PROMPT=$'\n$(directory_name) \n%{$reset_color%} ॐ  '
-  # Uncomment this line to enable much nice git tracking. 
-  # This is incredibly slow on the monorepo though, so it's disabled by default. 
+
+  export PROMPT=$'\n$(virtualenv_prompt) $(directory_name) %{$fg_bold[green]%}$(git_branch)\n%{$reset_color%} ॐ  '
+  # Uncomment this line to enable much nicer git tracking.
+  # This is incredibly slow on the monorepo though, so it's disabled by default.
   # export PROMPT=$'\n$(directory_name) $(git_dirty)$(need_push)\n%{$reset_color%} ॐ  '
+  # export PROMPT=$'\n$(directory_name) %{$fg_bold[green]%}$(git_branch)\n%{$reset_color%} ॐ  '
   set_prompt
 }

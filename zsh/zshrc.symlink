@@ -74,3 +74,4 @@ unset config_files
 export PATH="${PATH}:$HOME/code/phacility/arcanist/bin"
 export PATH="${PATH}:$HOME/code/flatiron/bin"
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+source /Users/bkies/.flatironrc
