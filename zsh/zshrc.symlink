@@ -1,6 +1,8 @@
 # Run ./clear_cache everytime you change dotfiles and source this file to load changes
 OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
+export PATH="$PATH:/usr/local/bin"
+
 
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
@@ -51,8 +53,8 @@ else
 fi
 
 # initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
-compinit
+# autoload -U compinit
+# compinit
 
 # load every completion after autocomplete loads
 # load everything but the path and completion files
@@ -88,3 +90,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+source /Users/bkies/.flatironrc

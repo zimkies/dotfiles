@@ -47,6 +47,7 @@
 [core]
 	excludesfile = /Users/bkies-mbp/.gitignore_global
 	editor = vim
+	autocrlf = input
 
 [apply]
         whitespsace = nowarn
